@@ -5,8 +5,7 @@ with open("firstChallenge.txt", "r") as f:
     for line in f.readlines():
         left.append(int(line.split("   ")[0]))
         right.append(int(line.split("   ")[1]))
-    left.sort()
-    right.sort()
     for i in range(len(left)):
-        res += abs((left[i] - right[i]))
+        print(left[i] * right.count(left[i]))
+        res += left[i] * right.count(left[i])
 print(res)
